@@ -1,5 +1,6 @@
 # Vim swap files
 .*.swp
+.*.swo
 
 # Object files
 *.o
@@ -34,4 +35,5 @@
 # Debug files
 *.dSYM/
 
-su-exec
+/su-exec
+/su-exec-static
