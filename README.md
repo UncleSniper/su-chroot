@@ -1,3 +1,28 @@
+# su-chroot
+switch user and group id, setgroups, chroot, and exec
+
+## Credit where credit is due
+
+This is [ncopa](https://github.com/ncopa/)'s [su-exec](https://github.com/ncopa/su-exec),
+slightly extended by me. So basically, almost all credit goes to Copa.
+
+## Purpose
+
+Like `su-exec`, this one changes UID/GID much like `su`, but without the intermediate
+process, i.e. via `exec` rather than via `fork` & `exec`. The difference is, this
+version also calls `chroot` before the `exec`.
+
+## Revised usage
+
+```shell
+su-chroot user-spec new-root command [arguments...]
+```
+
+## Back in the day...
+Copa's original `README.md` follows, see that for more info on this whole thing.
+
+---
+
 # su-exec
 switch user and group id, setgroups and exec
 
